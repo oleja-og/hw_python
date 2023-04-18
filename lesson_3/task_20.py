@@ -25,16 +25,15 @@
 
 print("Введите слово на русском или английском языке: ")
 word = input().upper()
-count_eng = 0
-count_rus = 0
+count = 0
 eng_dict = {"A, E, I, O, U, L, N, S, T, R": 1,
             "D, G": 2,
             "B, C, M, P": 3,
             "F, H, V, W, Y": 4,
             "K": 5,
             "J, X": 8,
-            "Q, Z": 10}
-rus_dict = {"А, В, Е, И, Н, О, Р, С, Т": 1,
+            "Q, Z": 10,
+            "А, В, Е, И, Н, О, Р, С, Т": 1,
            "Д, К, Л, М, П, У": 2,
            "Б, Г, Ё, Ь, Я": 3,
            "Й, Ы": 4,
@@ -46,16 +45,7 @@ rus_dict = {"А, В, Е, И, Н, О, Р, С, Т": 1,
 for i in eng_dict.keys():
     for j in i:
         if j in word:
-            count_eng += eng_dict.get(i)
+            count += eng_dict.get(i)
 
-for i in rus_dict.keys():
-    for j in i:
-        if j in word:
-            count_rus += rus_dict.get(i)
-
-if count_eng > count_rus:
-    print(f"{word} = {count_eng} очков")
-else:
-    print(f"{word} = {count_rus} очков")
-
+print(f"{word} = {count} очков")
 
