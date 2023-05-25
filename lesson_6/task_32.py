@@ -19,10 +19,9 @@ count_list = list()
 for i in range(numb):
     numbers.append(random.randint(-10, 10))
 print(numbers)
-count = 0
+
 for i in range(len(numbers)):
     if numbers[i] >= min_numb and numbers[i] <= max_numb:
-        count_list.append(count)
-    count += 1
+        count_list.append(i)
 print(count_list)
 
