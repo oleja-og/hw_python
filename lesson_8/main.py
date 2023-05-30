@@ -18,8 +18,13 @@ while True:
         print("нажмите ентер чтобы продолжить....")
         input()
     elif choice == 4:
-        exit()
-        break
+        delete_contact()
+        print("нажмите ентер чтобы продолжить....")
+        input()
+    elif choice == 5:
+        rename_contact()
+        print("нажмите ентер чтобы продолжить....")
+        input()
     else:
         print("Неправильное действие введите цифру от 1 до 4 !!!")
         print("нажмите ентер чтобы продолжить....")
