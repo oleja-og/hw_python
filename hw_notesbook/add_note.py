@@ -26,14 +26,8 @@ def creat_notesbook():
     with open("file_add.json", "w",  encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
 
-def valid_file():
-    if  os.path.exists("file_add.json") == True:
-        add_note()
-    else:
-        creat_notesbook()
-        add_note()
 
-def change_id_note():
+def change_id_note_afterdel():
     file_name = "file_add.json"
     data = json.load(open(file_name))
     id = 1

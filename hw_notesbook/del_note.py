@@ -1,5 +1,5 @@
 import json
-from add_note import change_id_note
+from add_note import change_id_note_afterdel
 def del_note():
     header = str(input("Ввведите заголовок заметки для удаления\n"))
     with open("file_add.json", "r", encoding='utf-8') as f:
@@ -14,6 +14,6 @@ def del_note():
 
     with open("file_add.json", "w") as  f:
         json.dump(data,f, indent=4)
-    change_id_note()
+    change_id_note_afterdel()
 
 
