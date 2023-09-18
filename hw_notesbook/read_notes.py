@@ -17,7 +17,7 @@ def read_one_note():
     with open("file_add.json", "r", encoding='utf-8') as f:
         print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
         data = json.load(f)
-    id = int(input("введите id заметки \n"))
+    id = int(input("введите № заметки \n"))
 
     for i in data['notes']:
         if i['id'] == id:
